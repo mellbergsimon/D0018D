@@ -8,7 +8,7 @@ public class Account {
 	private int interest;
 	private int accountNr;
 	private int accountType;
-	private static int accountCounter = 1000;
+	private static int accountCounter = 1001;
 	
 	
 	/**
@@ -18,7 +18,7 @@ public class Account {
 	public Account() throws Exception{
 		this.balance = 0;
 		this.interest = 1; //1%
-		this.accountNr = accountCounter += 1;
+		setAccountNr(accountCounter);
 		
 	}
 	
@@ -67,6 +67,7 @@ public class Account {
 	 * @param nr
 	 */
 	private void setAccountNr(int nr) {
+		accountCounter++;
 		this.accountNr = nr;
 	}
 	

@@ -3,11 +3,14 @@
 public class LocalTestBank {
 
 	public static void main (String[] args) throws Exception {
-		Account account = new Account();
+		Account account1 = new Account();
+		Account account2 = new Account();
+		Account account3 = new Account();
 		
-		account.setBalance(100);
 		
-		System.out.println(account.getBalance());
+		System.out.println(account1.getAccountNr());
+		System.out.println(account2.getAccountNr());		
+		System.out.println(account3.getAccountNr());
 		
 		
 		
