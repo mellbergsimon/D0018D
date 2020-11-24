@@ -10,6 +10,6 @@ public class Customer {
 	public Customer() throws Exception{
 		
 		
-		this.account = new Account();
+		this.account = new Account(1); 
 	}
 }

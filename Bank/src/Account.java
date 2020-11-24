@@ -15,19 +15,33 @@ public class Account {
 	 * Initialize account with no balance and default interest.
 	 * @throws Exception when wrong variables are used.
 	 */
-	public Account() throws Exception{
+	public Account(int accountType) throws Exception{
+		if (accountType != 1) {
+			throw new IllegalArgumentException("Wrong accountType, only 1 is valid.");
+		}
 		this.balance = 0;
 		this.interest = 1; //1%
 		setAccountNr(accountCounter);
+		this.accountType = accountType;
 		
 	}
 	
+	/**
+	 * 
+	 * @param balance
+	 * @param interest
+	 * @param accountType Type of account, only one available at the moment
+	 * @throws Exception When wrong accountType is used
+	 */
 	public Account(int balance, int interest, int accountType) throws Exception{
-		if (accountType != 1)
+		if (accountType != 1) {
+			throw new IllegalArgumentException("Wrong accountType, only 1 is valid.");
+		}
 		
 		this.balance = balance;
 		this.interest = interest;
 		this.accountType = accountType;
+		setAccountNr(accountCounter);
 	}
 	
 	/**
